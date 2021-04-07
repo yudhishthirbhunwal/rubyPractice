@@ -20,15 +20,10 @@ end
 puts "\nThe second input array is:"
 p secondArray
 
-value=false
 print "\nThere is a common element in the arrays: "
-firstArray.each do |var|
-    if secondArray.include?(var)
-        value = true
-        puts value
-        break
-    end
-end
-unless value
-    puts false
+subArray = firstArray & secondArray
+if subArray.empty?
+  puts false
+else
+  puts true
 end
